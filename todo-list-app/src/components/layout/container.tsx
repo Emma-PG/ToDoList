@@ -7,10 +7,10 @@
 "use client";
 
 export function Container({ children }: { children: React.ReactNode }) {
-    return (
-        <div>
-            {/* Implementación pendiente */}
-            {children}
-        </div>
-    );
+  return (
+    <div>
+      {/* Implementación pendiente */}
+      {children}
+    </div>
+  );
 }
