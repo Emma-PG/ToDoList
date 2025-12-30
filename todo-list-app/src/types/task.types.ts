@@ -3,27 +3,21 @@
  * Define las interfaces para tareas, categorías y el tablero de tareas
  */
 
-export interface Task {
-    id: string;
-    title: string;
-    description?: string;
-    completed: boolean;
-    categoryId: string;
-    createdAt: string;
-    updatedAt: string;
-}
+export type GeminiResponse = {
+  roadmap_title: string;
+  estimated_time: string;
+  phases: Array<Phase>;
+};
 
-export interface Category {
-    id: string;
-    name: string;
-    color: string;
-    order: number;
-}
+type Phase = {
+  phase_name: string;
+  learning_objectives: Array<string>;
+  tasks: Array<Task>;
+};
 
-export interface TaskBoard {
-    id: string;
-    planId: string;
-    categories: Category[];
-    tasks: Task[];
-    createdAt: string;
-}
+type Task = {
+  id: number;
+  title: string;
+  resource_type_suggestion: string;
+};
+
